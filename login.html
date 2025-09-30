@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="BxqFMjP67QZaZtUrwKITf6lTwlqaWOplyuKIZF9D">
+    <meta name="keywords" content="Vireonaxis">
+    <meta name="description" content="Vireonaxis">
+    <link rel="canonical" href="https://vireonaxis.org/login">
+    <link rel="shortcut icon" href="images/YhMZ1ycohINwveqKYlcs.png" type="image/x-icon">
+
+    <link rel="icon" href="images/YhMZ1ycohINwveqKYlcs.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/simple-notify.min.css">
+        <link rel="stylesheet" type="text/css" href="css/notify.css">        <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+            <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+       
+.site-head-tag {
+	margin: 0;
+  	padding: 0;
+}
+    </style>
+
+    <title>Vireonaxis -     Login
+</title>
+
+
+</head>
+<body>
+<script>
+    var notify = {
+        timeout: "5000",
+    }
+</script>
+
+
+    <!-- Login Section -->
+
+    <section class="section-style site-auth grad-overlay" style="background: url(images/auth-banner.jpg) no-repeat center center; background-size: cover;">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-5 col-lg-8 col-md-12">
+                    <div class="auth-content">
+                        <div class="logo">
+                            <a href="https://vireonaxis.org"><img src="images/blOJSXgwtdSHG5sMMMpd.png" alt=""></a>
+                        </div>
+                        <div class="title">
+                            <h2> 👋 Welcome Back!</h2>
+                            <p>Sign in to continue with Vireonaxis User Panel</p>
+                        </div>
+                        
+
+                        <div class="site-auth-form">
+                            <form id="emailLoginForm" action="javascript:void(0)">
+                                <input type="hidden" name="_token" value="BxqFMjP67QZaZtUrwKITf6lTwlqaWOplyuKIZF9D">                                <div class="single-field">
+                                    <label class="box-label" id="my_email" for="email">Email Or Username</label>
+                                    <input class="box-input" id="email" type="text" name="my_email" required="">
+                                </div>
+                                <div class="single-field">
+                                    <label class="box-label" for="password">Password</label>
+                                    <div class="password" style="position: relative;">
+                                        <input class="box-input" id="password" type="password" name="password" required />
+                                        <button type="button" id="togglePassword" 
+                                                style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
+                                                    background:none; border:none; cursor:pointer; font-size:14px;">
+                                        👁
+                                        </button>
+                                    </div>
+                                    </div>
+
+                                    <script>
+                                    const togglePassword = document.getElementById("togglePassword");
+                                    const passwordInput = document.getElementById("password");
+
+                                    togglePassword.addEventListener("click", () => {
+                                        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                                        passwordInput.setAttribute("type", type);
+                                        togglePassword.textContent = type === "password" ? "👁" : "🙈";
+                                    });
+                                    </script>
+
+
+                                
+                                <div class="single-field">
+                                    <input class="form-check-input check-input" type="checkbox" name="remember" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Remember me
+                                    </label>
+
+                                                                            <span class="forget-pass-text"><a href="forgot-password.html">Forget Password</a></span>
+                                                                    </div>
+                                <button type="submit" id="emailForm" class="site-btn-big primary-btn w-100">
+                                    Account Login
+                                </button>
+                            </form>
+                            <div class="singnup-text">
+                                <p>
+                                    Don't have an account?
+                                    <a href="register.html">Signup for free</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Login Section End -->
+
+    <!-- 📱 WhatsApp Button -->
+    <a href="http://wa.me/14843" target="_blank" id="whatsappBtn"
+    style="position: fixed; bottom: 20px; right: 75px;
+            background: #25D366; color: white; border: none;
+            border-radius: 50%; width: 55px; height: 55px;
+            font-size: 26px; text-align: center; line-height: 55px;
+            cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            text-decoration: none; z-index: 999;">
+    <i class="fab fa-whatsapp"></i>
+    </a>
+
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("emailLoginForm");
+    const SUPABASE_URL = "https://tvwnxojfwdjolwezdbbk.supabase.co";
+    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR2d254b2pmd2Rqb2x3ZXpkYmJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwNjUwODIsImV4cCI6MjA3NDY0MTA4Mn0.G2MNohZ7iw8xwpyKLQoe6SDy31BxaIkkMcW_YX_0t9Y";
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        // ✅ Step 1: Sign in
+        const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+        });
+
+        if (error) {
+        // alert(error.message);
+        console.log(error)
+        return;
+        }
+
+        const user = data.user;
+        if (!user) {
+        alert("No user found.");
+        return;
+        }
+
+        // ✅ Step 2: Fetch profile by user id
+        const { data: profile, error: profileError } = await supabaseClient
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+
+        if (profileError) {
+        console.error("Profile fetch error:", profileError);
+        alert("Could not load profile: " + profileError.message);
+        return;
+        }
+
+        // ✅ Save profile + auth session
+        localStorage.setItem("profile", JSON.stringify(profile));
+        localStorage.setItem("session", JSON.stringify(data.session));
+
+        // ✅ Greet user
+        alert(`Welcome back, ${profile.fname} ${profile.lname}!`);
+
+        // ✅ Step 3: Redirect to dashboard
+        window.location.href = "user/dashboard.html";
+    });
+    });
+    </script>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/scrollUp.min.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/lucide.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/simple-notify.min.js"></script>
+
+<script src="js/particles.min.js"></script>
+<script src="js/particle-app.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/custom.js"></script>
+    <script>
+        (function ($) {
+            'use strict';
+            // AOS initialization
+            AOS.init();
+        })(jQuery);
+    </script>
+
+<script type="text/javascript" src="js/notify.js"></script>
+
+
+
+
+
+
+
+
+</body></html>

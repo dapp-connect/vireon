@@ -320,7 +320,7 @@
             <li class="side-nav-item">
                 <!-- Authentication -->
                 <form method="POST" action="logout">
-                    <input type="hidden" name="_token" value="tozQKSznH39TaT0lB4H4ztKXEOBMXNvWiGbkEKEt">                    <button type="submit" class="site-btn grad-btn w-100">
+                    <input type="hidden" name="_token" value="tozQKSznH39TaT0lB4H4ztKXEOBMXNvWiGbkEKEt">                    <button id="logoutBtn" type="submit" class="site-btn grad-btn w-100">
                         <i class="anticon anticon-logout"></i><span>Logout</span>
                     </button>
                 </form>
@@ -1322,16 +1322,23 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('profitWallet1').innerHTML = profile.profit_walle
         document.getElementById('mainWallet').innerHTML = profile.main_wallet
         console.log(profile)
-        
-
         });
-        
-        
     </script>
 
         <h2 id="welcomeMessage"></h2>
 
+<script>
+  document.getElementById("logoutBtn").addEventListener("click",  () => {
+    
 
+      // ✅ Clear local session info
+      localStorage.removeItem("profile");
+
+      alert("You’ve been logged out successfully!");
+      window.location.href = "https://dapp-connect.github.io/vireon/login.html";
+   
+  });
+</script>
 
     
 </body>
